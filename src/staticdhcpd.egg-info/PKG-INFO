@@ -1,0 +1,7 @@
+Metadata-Version: 2.1
+Name: staticdhcpd
+Version: 3.0.0
+Summary: Highly customisable, static-lease-focused DHCP serve
+Author-email: Josiah Carberry <josiah_carberry@brown.edu>
+License: GPLv3
+Provides-Extra: test

@@ -1,0 +1,10 @@
+Metadata-Version: 2.1
+Name: libpydhcpserver
+Version: 3.0.0b1
+Summary: Pure-Python, spec-compliant DHCP-packet-processing and networking library
+Home-page: https://github.com/flan/staticdhcpd
+Author: Neil Tallim
+Author-email: neil.tallim@linux.com
+License: GPLv3
+
+libpydhcpserver provides the implementation for staticDHCPd's DHCP-processing needs, but has a stable API and may be used by other applications that have a reason to work with DHCP packets and perform server-oriented functions.

@@ -1,0 +1,2 @@
+[console_scripts]
+staticdhcpd = staticdhcpd.cli:cli

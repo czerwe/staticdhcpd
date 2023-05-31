@@ -1,0 +1,44 @@
+[build-system]
+requires = ["setuptools", "setuptools-scm"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "staticdhcpd"
+version = "3.0.0"
+authors = [
+    {name = "Josiah Carberry", email = "josiah_carberry@brown.edu"},
+]
+description = "Highly customisable, static-lease-focused DHCP serve"
+license = {text = "GPLv3"}
+dependencies = [
+    "click",
+    "everett"
+]
+
+
+[project.scripts]
+staticdhcpd = "staticdhcpd.cli:cli"
+
+[tool.setuptools.packages.find]
+where = ["."]
+
+[project.optional-dependencies]
+test = ["coverage",
+    "pytest-cov",
+    "pytest-mock",
+    "requests-mock",
+    "pytest"]
+
+
+[tool.setuptools.package-data]
+"*" = ["templates/**", "__version__"]
+
+
+[tool.mypy]
+exclude = [
+    '^__version__$',  # TOML literal string (single-quotes, no escaping necessary)
+]
+
+
+[tool.isort]
+profile = "black"

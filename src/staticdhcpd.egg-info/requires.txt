@@ -1,0 +1,9 @@
+click
+everett
+
+[test]
+coverage
+pytest-cov
+pytest-mock
+requests-mock
+pytest
