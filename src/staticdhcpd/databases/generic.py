@@ -29,7 +29,7 @@ import logging
 import threading
 import traceback
 
-from staticdhcpdlib.libpydhcpserver.dhcp_types.ipv4 import IPv4
+from staticdhcpd.libpydhcpserver.dhcp_types.ipv4 import IPv4
 
 _logger = logging.getLogger("databases.generic")
 

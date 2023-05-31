@@ -214,7 +214,7 @@ def initialise():
     """
     import staticdhcpd.system
 
-    if staticdhcpdlib.config.WEB_ENABLED:
+    if staticdhcpd.config.WEB_ENABLED:
         _logger.info("Webservice module enabled; configuring...")
         import staticdhcpd.web
         import staticdhcpd.web.server
@@ -283,20 +283,20 @@ def initialiseDHCP():
     """
     Loads and configures DHCP system components.
     """
-    import staticdhcpdlib.system
+    import staticdhcpd.system
 
     # Ready the database.
     import staticdhcpd.databases
 
-    database = staticdhcpdlib.databases.get_database()
-    staticdhcpdlib.system.registerReinitialisationCallback(database.reinitialise)
+    database = staticdhcpd.databases.get_database()
+    staticdhcpd.system.registerReinitialisationCallback(database.reinitialise)
 
     # Start the DHCP server.
     import staticdhcpd.dhcp
 
-    dhcp = staticdhcpdlib.dhcp.DHCPService(database)
+    dhcp = staticdhcpd.dhcp.DHCPService(database)
     dhcp.start()
-    staticdhcpdlib.system.registerTickCallback(dhcp.tick)
+    staticdhcpd.system.registerTickCallback(dhcp.tick)
 
 
 # if __name__ == '__main__':

@@ -24,4 +24,4 @@ DHCP_SERVER_IP = "10.0.0.79"
 # The database-engine to use
 # For details, see the configuration guide in the documentation.
 DATABASE_ENGINE = "INI"
-INI_FILE = "/home/pi/src/staticDHCPd/home/pi/src/staticDHCPd/staticdhcpd/conf/db.ini"
+INI_FILE = "/home/pi/src/staticDHCPd/home/pi/src/staticDHCPd/src/conf/db.ini"

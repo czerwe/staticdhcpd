@@ -31,8 +31,8 @@ import traceback
 from . import config
 from . import statistics
 
-import staticdhcpdlib.libpydhcpserver as libpydhcpserver
-from staticdhcpdlib.libpydhcpserver.dhcp_types.ipv4 import IPv4
+import staticdhcpd.libpydhcpserver as libpydhcpserver
+from staticdhcpd.libpydhcpserver.dhcp_types.ipv4 import IPv4
 
 from .databases.generic import Definition
 
@@ -419,7 +419,7 @@ def _dhcpHandler(packet_type):
     return decorator
 
 
-from staticdhcpdlib.libpydhcpserver.dhcp import DHCPServer
+from staticdhcpd.libpydhcpserver.dhcp import DHCPServer
 
 
 class _DHCPServer(DHCPServer):

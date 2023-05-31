@@ -339,7 +339,7 @@ del inspect
 
 # Inject namespace elements into conf.
 ##############################################################################
-import staticdhcpdlib.libpydhcpserver.dhcp_types.conversion as conversion
+import staticdhcpd.libpydhcpserver.dhcp_types.conversion as conversion
 
 conf.listToIP = conversion.listToIP
 conf.listToIPs = conversion.listToIPs
@@ -358,7 +358,7 @@ conf.strToPaddedList = conversion.strToPaddedList
 conf.listToStr = conversion.listToStr
 del conversion
 
-import staticdhcpdlib.libpydhcpserver.dhcp_types.rfc as rfc
+import staticdhcpd.libpydhcpserver.dhcp_types.rfc as rfc
 
 conf.rfc3046_decode = rfc.rfc3046_decode
 conf.rfc3925_decode = rfc.rfc3925_decode

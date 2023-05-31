@@ -28,7 +28,7 @@ import logging
 import re
 import threading
 
-from staticdhcpdlib.libpydhcpserver.dhcp_types.mac import MAC
+from staticdhcpd.libpydhcpserver.dhcp_types.mac import MAC
 
 from .. import config
 

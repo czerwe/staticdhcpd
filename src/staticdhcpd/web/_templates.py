@@ -30,12 +30,12 @@ import traceback
 from .. import config
 from . import functions
 
-import staticdhcpdlib
-import staticdhcpdlib.libpydhcpserver as libpydhcpserver
+import staticdhcpd
+import staticdhcpd.libpydhcpserver as libpydhcpserver
 
 _logger = logging.getLogger("web.server")
 
-from staticdhcpdlib.web import (
+from staticdhcpd.web import (
     retrieveHeaderCallbacks,
     retrieveDashboardCallbacks,
     retrieveVisibleMethodCallbacks,
@@ -44,8 +44,8 @@ from staticdhcpdlib.web import (
 _SYSTEM_NAME = functions.sanitise(config.SYSTEM_NAME)  #: The name of the system
 _FOOTER = (
     '<a href="{}">staticDHCPd</a> v{} | <a href="{}">libpydhcpserver</a> v{}'.format(
-        functions.sanitise(staticdhcpdlib.URL),
-        functions.sanitise(staticdhcpdlib.VERSION),
+        functions.sanitise(staticdhcpd.URL),
+        functions.sanitise(staticdhcpd.VERSION),
         functions.sanitise(libpydhcpserver.URL),
         functions.sanitise(libpydhcpserver.VERSION),
     )

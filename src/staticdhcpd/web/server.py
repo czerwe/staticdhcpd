@@ -35,7 +35,7 @@ import traceback
 import urllib.parse
 import uuid
 
-from staticdhcpdlib.web import retrieveMethodCallback
+from staticdhcpd.web import retrieveMethodCallback
 
 from .. import config
 from . import _templates
